@@ -4,20 +4,36 @@ All commands refer to normal mode.
 
 ## Basic vi keybindings
 
-- vi has two modes: command mode and insertion mode, `i` changes to insertion
-  mode, `ESC` or rapid `f d` changes back to normal mode
-- Abort a command: `C-h a`
+### Change to insert mode
+
+- insert before position: `i`
+- append after position: `a`
+- append after line: `A`
+- append new line after current line: `o`
+- append new line before current line: `O`
+- change rest of line: `C`
+
+### Change to normal / command mode
+
+- rapid `f d`
+- alternatively: `ESC`
+
+### Undo / redo:
+
 - Undo/Redo: `u`, `C-r`
 
 ### Basic navigation
 
 - move left, down, up, right: `h`, `j`, `k`, `l`
 - move a word left / right: `b`, `w`
-- move to beginning of file / end of file: `g g` / `G` 
+- move to beginning of file / end of file: `g g` / `G`
 - move to end of line: `$`
 - move to first non-whitespace character in line: `^`
 - move to previous/next block/function: `[[` / `]]`
-- move to beginning / end of line: `C-a`, `C-e`
+- move to previous/next paragraph: `{{` / `}}`
+- move to beginning / end of line: `0`, `$`
+- move to matching parenthesis: `%`
+- go to line 42: `l:77 RET`
 
 ### Copy & Paste
 
@@ -49,10 +65,11 @@ All commands refer to normal mode.
 - change to window using relative direction: `SPC CURSOR`
 - jump to given window number: `SPC 1`, `SPC 2`...
 - split windows: `SPC w /` for left/right split, `SPC w -` for lower upper, `SPC
-  w 3` for three column layout
+  w 3` for three column layout (alternative: `SPC w 2`)
 - window sizing: `SPC t g` toggles golden-ratio, which enlarges the current
   window
 - delete window: `SPC w d`
+- toggle window layout (horizonal/vertical): `SPC w +`
 
 ## Searching
 
@@ -82,6 +99,8 @@ All commands refer to normal mode.
 - go to definition: `SPC m g`; jump back: `C-o`
 - indent region: `C-M-\`
 - highlight symbol at current position: `SPC s h`
+- toggle comment for line (using evil-commentary): `g c c`
+- toggle comment for paragraph: `g c }`
 
 ## Compilation
 
@@ -109,8 +128,6 @@ All commands refer to normal mode.
 
 **TODO: working with terminal**
 
-**TODO: debugger intergration**
+**TODO: debugger integration**
 
 **TODO: explore NeoTree**
-
-**TODO: find out why C-e does not jump to line ending**
