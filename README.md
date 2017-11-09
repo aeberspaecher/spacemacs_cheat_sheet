@@ -34,6 +34,7 @@ All commands refer to normal mode.
 - move to beginning / end of line: `0`, `$`
 - move to matching parenthesis: `%`
 - go to line 42: `l:77 RET`
+- aided line selection: `SPC j l` (works nicely with `d` or `g c` as well)
 
 ### Copy & Paste
 
@@ -56,8 +57,10 @@ All commands refer to normal mode.
 ## Buffer control
 
 - change buffer with helm: `SPC b b`
-- kill active buffer `SPC b k`
+- kill active buffer `SPC b d`
+- kill all buffers but current one: `SPC b K`
 - open recent files with helm: `SPC f r`
+
 
 ## Windows
 
@@ -79,6 +82,16 @@ All commands refer to normal mode.
 - [ag](https://geoff.greer.fm/ag/) is available: `SPC s a`
     - use ag with pattern to given on current file: `SPC s a a`
     - use ag in helm to search all buffers: `SPC s a b`
+- search using helm swoop: `SPC s s`
+- search all buffers using helm swoop: `SPC s C-s`
+- jump to function definition, heading (i.e. as parsed by semantic) etc: `SPC s j`
+- edit all occurrences of a search term: `SPC s e`
+- highlight word under cursor: `SPC s h`
+- clear highlighting: `SPC s c`
+
+## Bookmarks
+
+- manage bookmarks with helm: `SPC f b`
 
 ## Helm
 
@@ -93,6 +106,10 @@ All commands refer to normal mode.
 ## Projectile
 
 - find file in project: `SPC p f`
+- browse project buffers: `SPC p b`
+- search in project: `SPC p /`
+- change project: `SPC p p`
+- open project root in dired: `SPC p D`
 
 ## Working with code
 
@@ -112,12 +129,15 @@ All commands refer to normal mode.
 
 ## Terminal
 
+- open terminal in new buffer: `SPC ''`
+
 ## Spell checking
 
--  [flyspell](https://www.emacswiki.org/emacs/FlySpell) is available through
+- toggle spell checking: `SPC t S`
+- [flyspell](https://www.emacswiki.org/emacs/FlySpell) is available through
    `SPC S`
--  check current buffer: `SPC S b`
--  jump to next spelling error: `SPC S n`
+- check current buffer: `SPC S b`
+- jump to next spelling error: `SPC S n`
 
 ## Python specifics
 
@@ -125,9 +145,17 @@ All commands refer to normal mode.
 - run file in new window and focus new window: `SPC m c C` (allows quick window
   deleting after running)
 
+## DocView (for PDF and other documents)
+
+- fit page to window: `P`
+- enlarge/shrink: `+` / `-`
+- go to page number: `g t`
+- kill process and buffer: `K`
 
 **TODO: working with terminal**
 
 **TODO: debugger integration**
 
 **TODO: explore NeoTree**
+
+**TODO: explore DirEd**
