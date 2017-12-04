@@ -29,6 +29,7 @@ All commands refer to normal mode.
 - move to beginning of file / end of file: `g g` / `G`
 - move to end of line: `$`
 - move to first non-whitespace character in line: `^`
+- move to first column: `0`
 - move to previous/next block/function: `[[` / `]]`
 - move to previous/next paragraph: `{{` / `}}`
 - move to beginning / end of line: `0`, `$`
@@ -48,10 +49,12 @@ All commands refer to normal mode.
 - delete a line: `d d`
 - delete a word: `d w`
 
-## Spacemacs
+## Spacemacs/Files
 
 - open/create buffer: `SPC f f`
 - save buffer: `SPC f s`
+- save buffer as: `SPC f c`
+- helm locate: `SPC f L`
 - go up one level: `SPC-h`
 
 ## Buffer control
@@ -142,8 +145,18 @@ All commands refer to normal mode.
 ## Python specifics
 
 - run current file in new window: `SPC m c c`
+- start REPL: `SPC m '`
+- send file to running REPL and switch there: `SPC m e B`
+- pyenv workon: `SPC m V w`
 - run file in new window and focus new window: `SPC m c C` (allows quick window
   deleting after running)
+
+## LaTeX
+
+- close environment: `SPC m c`
+- insert environment: `SPC m e`
+- build tex file: `SPC m b`
+- view built file: `SPC m v`
 
 ## DocView (for PDF and other documents)
 
@@ -159,3 +172,4 @@ All commands refer to normal mode.
 **TODO: explore NeoTree**
 
 **TODO: explore DirEd**
+(require 'helm-bookmark)
