@@ -43,11 +43,13 @@ All commands refer to normal mode.
 - copy a line: `y y`
 - yank text: `y`
 - paste text: `p`
+- show killring in helm: `SPC r y`
 
 ### Delete text
 
 - delete a line: `d d`
 - delete a word: `d w`
+- delete trailing whitespace: `SPC x d w`
 
 ## Spacemacs/Files
 
