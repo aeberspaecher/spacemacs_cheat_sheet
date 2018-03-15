@@ -31,9 +31,10 @@ All commands refer to normal mode.
 - move to first non-whitespace character in line: `^`
 - move to first column: `0`
 - move to previous/next block/function: `[[` / `]]`
-- move to previous/next paragraph: `{{` / `}}`
+- move to previous/next paragraph: `{` / `}`
+- move backwards/forwards by one sentence: `(` / `)`
 - move to beginning / end of line: `0`, `$`
-- move to matching parenthesis: `%`
+- move to matching parenthesis/TeX environment...: `%`
 - go to line 42: `l:77 RET`
 - aided line selection: `SPC j l` (works nicely with `d` or `g c` as well)
 
@@ -51,7 +52,7 @@ All commands refer to normal mode.
 - delete a word: `d w`
 - delete trailing whitespace: `SPC x d w`
 
-## Spacemacs/Files
+## Spacemacs/Files/Buffers
 
 - open/create buffer: `SPC f f`
 - save buffer: `SPC f s`
@@ -66,7 +67,6 @@ All commands refer to normal mode.
 - kill all buffers but current one: `SPC b K`
 - open recent files with helm: `SPC f r`
 
-
 ## Windows
 
 - Window control: `SPC w ...`
@@ -77,7 +77,7 @@ All commands refer to normal mode.
 - window sizing: `SPC t g` toggles golden-ratio, which enlarges the current
   window
 - delete window: `SPC w d`
-- toggle window layout (horizonal/vertical): `SPC w +`
+- toggle window layout (horizontal/vertical): `SPC w +`
 
 ## Searching
 
@@ -88,6 +88,7 @@ All commands refer to normal mode.
     - use ag with pattern to given on current file: `SPC s a a`
     - use ag in helm to search all buffers: `SPC s a b`
 - search using helm swoop: `SPC s s`
+- smart search (search directory): `SPC /` or `SPC s p`
 - search all buffers using helm swoop: `SPC s C-s`
 - jump to function definition, heading (i.e. as parsed by semantic) etc: `SPC s j`
 - edit all occurrences of a search term: `SPC s e`
@@ -97,10 +98,6 @@ All commands refer to normal mode.
 ## Bookmarks
 
 - manage bookmarks with helm: `SPC f b`
-
-## Helm
-
-- Mini Helm: `SPC b b`
 
 ## Neotree
 
@@ -123,6 +120,7 @@ All commands refer to normal mode.
 - highlight symbol at current position: `SPC s h`
 - toggle comment for line (using evil-commentary): `g c c`
 - toggle comment for paragraph: `g c }`
+- insert unicode character using helm ucs: `SPC i u`
 
 ## Compilation
 
@@ -167,6 +165,10 @@ All commands refer to normal mode.
 - go to page number: `g t`
 - kill process and buffer: `K`
 
+## Org
+
+- org capture: `SPC a o c`
+
 **TODO: working with terminal**
 
 **TODO: debugger integration**
@@ -174,4 +176,3 @@ All commands refer to normal mode.
 **TODO: explore NeoTree**
 
 **TODO: explore DirEd**
-(require 'helm-bookmark)
