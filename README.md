@@ -173,6 +173,11 @@ All commands refer to normal mode.
 
 - org capture: `SPC a o c`
 
+## Version control / Magit
+
+- show a file's history: `SPC g f h`
+- open Magit popup: `SPC g m`
+
 **TODO: working with terminal**
 
 **TODO: debugger integration**
