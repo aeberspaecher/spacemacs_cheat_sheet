@@ -43,7 +43,7 @@ All commands refer to normal mode.
 - copy a word: `y w`
 - copy a line: `y y`
 - yank text: `y`
-- paste text: `p`
+- paste text before/after cursor: `p` / `P`
 - show killring in helm: `SPC r y`
 
 ### Delete text
@@ -98,6 +98,10 @@ All commands refer to normal mode.
 ## Bookmarks
 
 - manage bookmarks with helm: `SPC f b`
+  - delete selected bookmark: `C-d`
+  - edit selected bookmark: `C-e`
+  - open selected bookmark in another window: `C-o`
+  - toggle filename location: `C-f`
 
 ## Neotree
 
