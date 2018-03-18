@@ -45,6 +45,7 @@ All commands refer to normal mode.
 - yank text: `y`
 - paste text before/after cursor: `p` / `P`
 - show killring in helm: `SPC r y`
+- select using expansion/contraction of selection: `SPC v v` / `SPC v V`
 
 ### Delete text
 
@@ -59,6 +60,8 @@ All commands refer to normal mode.
 - save buffer as: `SPC f c`
 - helm locate: `SPC f L`
 - go up one level: `SPC-h`
+- leave/quit spacemacs, also kill daemon: `SPC q q`
+- kill `frame` (Emacs window), leave daemon running: `SPC q z`
 
 ## Buffer control
 
@@ -94,6 +97,7 @@ All commands refer to normal mode.
 - edit all occurrences of a search term: `SPC s e`
 - highlight word under cursor: `SPC s h`
 - clear highlighting: `SPC s c`
+- go to next/previous occurrence of word at point `*` / `#`
 
 ## Bookmarks
 
