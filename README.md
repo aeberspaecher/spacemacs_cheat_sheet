@@ -182,6 +182,14 @@ All commands refer to normal mode.
 - show a file's history: `SPC g f h`
 - open Magit popup: `SPC g m`
 
+## Layouts
+
+Layouts provide buffer isolation useful for e.g. switching context of work.
+
+- jump to or create layout 2: `SPC l 2`
+- add buffer to layout `SPC l a`
+- select buffer in layout: `SPC l b`
+
 **TODO: working with terminal**
 
 **TODO: debugger integration**
