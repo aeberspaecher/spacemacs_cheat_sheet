@@ -182,6 +182,8 @@ All commands refer to normal mode.
 
 - show a file's history: `SPC g f h`
 - open Magit popup: `SPC g m`
+- commit: `SPC g m c`
+- in commit message window: close message and commit: `, ,`
 
 ## Layouts
 
