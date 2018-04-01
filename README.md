@@ -50,7 +50,7 @@ All commands refer to normal mode.
 ### Delete text
 
 - delete a line: `d d`
-- delete a word: `d w`
+- delete works with all shortcuts for navigation, e.g. delete a word: `d w`
 - delete trailing whitespace: `SPC x d w`
 
 ## Spacemacs/Files/Buffers
@@ -73,7 +73,8 @@ All commands refer to normal mode.
 ## Windows
 
 - Window control: `SPC w ...`
-- change to window using relative direction: `SPC CURSOR`
+- switch to other window: `SPC w w`
+- change to window using relative direction: `SPC w CURSOR`
 - jump to given window number: `SPC 1`, `SPC 2`...
 - split windows: `SPC w /` for left/right split, `SPC w -` for lower upper, `SPC
   w 3` for three column layout (alternative: `SPC w 2`)
@@ -86,7 +87,7 @@ All commands refer to normal mode.
 
 - search: `/ SEARCHTERM RET` searches, `n` and `N` move forth and back between
   hits
-- turn off highlighting for previous search: `:nohl`
+- turn off highlighting for previous search: `:nohl`, or `SPC s c`
 - [ag](https://geoff.greer.fm/ag/) is available: `SPC s a`
     - use ag with pattern to given on current file: `SPC s a a`
     - use ag in helm to search all buffers: `SPC s a b`
