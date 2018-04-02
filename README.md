@@ -108,11 +108,24 @@ All commands refer to normal mode.
   - open selected bookmark in another window: `C-o`
   - toggle filename location: `C-f`
 
-## Neotree
+## Dired
 
-- toggle NeoTree: `SPC f t`
-- open file in last active window: `RET`
-- open file in window 3: `3 RET`
+- activate dired: `C-x d`
+- jump to containing directory in dired: `SPC f j`
+
+### Commands & navigation in dired
+
+- open directory at point in same buffer: `a`
+- go one directory up: `^`
+- jump to next/previous subdirectory in current listing: `>` / `<`
+- rename: `R`
+- copy: `C`
+- delete: `D`
+- create directory: `+`
+- mark/unmark file: `m` / `u`
+- unmark all: `U`
+- mark by pattern: `% m`, e.g. `% m \.png` marks all png files
+- initiate diff with file under cursor: `=`
 
 ## Projectile
 
@@ -196,7 +209,3 @@ Layouts provide buffer isolation useful for e.g. switching context of work.
 **TODO: working with terminal**
 
 **TODO: debugger integration**
-
-**TODO: explore NeoTree**
-
-**TODO: explore DirEd**
