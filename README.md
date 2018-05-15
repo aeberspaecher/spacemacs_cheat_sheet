@@ -62,6 +62,8 @@ All commands refer to normal mode.
 - go up one level: `SPC-h`
 - leave/quit spacemacs, also kill daemon: `SPC q q`
 - kill `frame` (Emacs window), leave daemon running: `SPC q z`
+- use helm to find a file, insert path at position: `C-c i` (in helm)
+- resume last helm: `SPC r l`
 
 ## Buffer control
 
