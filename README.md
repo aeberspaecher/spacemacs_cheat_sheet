@@ -242,6 +242,34 @@ Layouts provide buffer isolation useful for e.g. switching context of work.
 - save a layout to a file: `SPC l s`
 - restore a layout from a file: `SPC l L`
 
+## ediff
+
+Start ediff by calling `ediff` or `ediff-buffers` (`SPC SPC ediff`)
+
+- jump to next hunk: `j`
+- copy A -> B or B -> A: `a` / `b`
+- quit ediff: `q`
+
+## Buffer management with ibuffer
+
+- start ibuffer: `SPC SPC ibuffer`
+  - mark for deletion: `d`
+  - commit changes: `x`
+  - quit: `q`
+  - get help: `q`
+
+## realgud
+
+- start with `realgud-*` command
+  - Next / step over: `n` / `F10`
+  - Step (into): `s` / `F11`
+  - Finish / step out: `f` / `S-F11`
+  - set breakpoint: `b` / `F9`
+  - clear breakpoint: `D`
+  - continue: `c` / `F5`
+  - quit: `q` / `S-F5`
+  - run / restart: `R` / `r`
+  - goto command window: `S`
 
 **TODO: working with terminal**
 
