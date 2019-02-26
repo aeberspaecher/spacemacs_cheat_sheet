@@ -12,6 +12,7 @@ All commands refer to normal mode.
 - append new line after current line: `o`
 - append new line before current line: `O`
 - change rest of line: `C`
+- delete under current character and change to insert mode: `s`
 
 ### Change to normal / command mode
 
@@ -37,6 +38,8 @@ All commands refer to normal mode.
 - move to matching parenthesis/TeX environment...: `%`
 - go to line 42: `l:77 RET`
 - aided line selection: `SPC j l` (works nicely with `d` or `g c` as well)
+- jump to/right before next ): `f )` / `t )`
+- jump to/right before previous ): `F )` / `T )`
 
 ### Copy & Paste
 
@@ -46,12 +49,23 @@ All commands refer to normal mode.
 - paste text before/after cursor: `p` / `P`
 - show killring in helm: `SPC r y`
 - select using expansion/contraction of selection: `SPC v v` / `SPC v V`
+- paste in minibuffer: `C-y`
 
 ### Delete text
 
 - delete a line: `d d`
-- delete works with all shortcuts for navigation, e.g. delete a word: `d w`
+- deleting (and other operators!) works with all shortcuts for navigation, e.g. delete two words: `d 2 w` or delete up to next ): `d f )`
 - delete trailing whitespace: `SPC x d w`
+
+### Neat stuff
+
+- join current line with next line: `J`
+- get a preview in helm (e.g. files, themes...): `TAB` on current selection
+- show more action on helm selection: `C-z`
+- even more stuff on helm selection: `C-c`
+- surround selection with ": `s "`
+- quit something that may hang: `C-g`
+
 
 ## Spacemacs/Files/Buffers
 
@@ -64,6 +78,7 @@ All commands refer to normal mode.
 - kill `frame` (Emacs window), leave daemon running: `SPC q z`
 - use helm to find a file, insert path at position: `C-c i` (in helm)
 - resume last helm: `SPC r l`
+- copy file path/directory: `SPC f y y` / `SPC f y d`
 
 ## Buffer control
 
@@ -84,6 +99,7 @@ All commands refer to normal mode.
   window
 - delete window: `SPC w d`
 - toggle window layout (horizontal/vertical): `SPC w +`
+- focus minibuffer: `SPC w b`
 
 ## Searching
 
@@ -139,12 +155,17 @@ All commands refer to normal mode.
 
 ## Working with code
 
-- go to definition: `SPC m g`; jump back: `C-o`
+- go to definition: `g d`; jump back: `C-o`
+- open definition in other window: `g D`
 - indent region: `C-M-\`
 - highlight symbol at current position: `SPC s h`
 - toggle comment for line (using evil-commentary): `g c c`
 - toggle comment for paragraph: `g c }`
 - insert unicode character using helm ucs: `SPC i u`
+- toggle aggressive indent: `SPC t I`
+  - indent/unindent: `>` / `<`
+- toggle completion: `S-SPC`
+- cycle through completions: `M-S-/`
 
 ## Compilation
 
@@ -207,6 +228,9 @@ Layouts provide buffer isolation useful for e.g. switching context of work.
 - jump to or create layout 2: `SPC l 2`
 - add buffer to layout `SPC l a`
 - select buffer in layout: `SPC l b`
+- save a layout to a file: `SPC l s`
+- restore a layout from a file: `SPC l L`
+
 
 **TODO: working with terminal**
 
