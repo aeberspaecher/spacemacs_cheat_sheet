@@ -216,10 +216,21 @@ All commands refer to normal mode.
 
 ## Version control / Magit
 
+- git status: `SPC g s`
 - show a file's history: `SPC g f h`
 - open Magit popup: `SPC g m`
 - commit: `SPC g m c`
 - in commit message window: close message and commit: `, ,`
+- unfold stuff: `TAB`
+- in Magit:
+  - stage: `s`
+  - commit: `c`
+  - unstage: `u`
+  - refresh: `g`
+  - rebase: `r`
+  - reword: `w`
+  - branch spin off (e.g. move commit wrongly made on master to a feature branch): `b s`
+  - pull request: `b Y`
 
 ## Layouts
 
