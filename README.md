@@ -223,14 +223,14 @@ All commands refer to normal mode.
 - in commit message window: close message and commit: `, ,`
 - unfold stuff: `TAB`
 - in Magit:
-  - stage: `s`
-  - commit: `c`
-  - unstage: `u`
-  - refresh: `g`
-  - rebase: `r`
-  - reword: `w`
-  - branch spin off (e.g. move commit wrongly made on master to a feature branch): `b s`
-  - pull request: `b Y`
+    - stage: `s`
+    - commit: `c`
+    - unstage: `u`
+    - refresh: `g`
+    - rebase: `r`
+    - reword: `w`
+    - branch spin off (e.g. move commit wrongly made on master to a feature branch): `b s`
+    - pull request: `b Y`
 
 ## Layouts
 
@@ -253,23 +253,23 @@ Start ediff by calling `ediff` or `ediff-buffers` (`SPC SPC ediff`)
 ## Buffer management with ibuffer
 
 - start ibuffer: `SPC SPC ibuffer`
-  - mark for deletion: `d`
-  - commit changes: `x`
-  - quit: `q`
-  - get help: `q`
+    - mark for deletion: `d`
+    - commit changes: `x`
+    - quit: `q`
+    - get help: `q`
 
 ## realgud
 
 - start with `realgud-*` command
-  - Next / step over: `n` / `F10`
-  - Step (into): `s` / `F11`
-  - Finish / step out: `f` / `S-F11`
-  - set breakpoint: `b` / `F9`
-  - clear breakpoint: `D`
-  - continue: `c` / `F5`
-  - quit: `q` / `S-F5`
-  - run / restart: `R` / `r`
-  - goto command window: `S`
+    - Next / step over: `n` / `F10`
+    - Step (into): `s` / `F11`
+    - Finish / step out: `f` / `S-F11`
+    - set breakpoint: `b` / `F9`
+    - clear breakpoint: `D`
+    - continue: `c` / `F5`
+    - quit: `q` / `S-F5`
+    - run / restart: `R` / `r`
+    - goto command window: `S`
 
 **TODO: working with terminal**
 
