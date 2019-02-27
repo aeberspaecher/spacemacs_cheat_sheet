@@ -26,11 +26,10 @@ All commands refer to normal mode.
 ### Basic navigation
 
 - move left, down, up, right: `h`, `j`, `k`, `l`
-- move a word left / right: `b`, `w`
+- move a word (~ alphanumeric stuff between whitespace) left / right: `b`, `w`
+- move a WORD (any stuff between whitespace) left / right: `B`, `W`
 - move to beginning of file / end of file: `g g` / `G`
-- move to end of line: `$`
 - move to first non-whitespace character in line: `^`
-- move to first column: `0`
 - move to previous/next block/function: `[[` / `]]`
 - move to previous/next paragraph: `{` / `}`
 - move backwards/forwards by one sentence: `(` / `)`
@@ -38,8 +37,9 @@ All commands refer to normal mode.
 - move to matching parenthesis/TeX environment...: `%`
 - go to line 42: `l:77 RET`
 - aided line selection: `SPC j l` (works nicely with `d` or `g c` as well)
-- jump to/right before next ): `f )` / `t )`
+- jump to/right before next ): `f )` / `t )` (`;` jumps to next occurrence)
 - jump to/right before previous ): `F )` / `T )`
+- jump back to position before last jump: `C-o`
 
 ### Copy & Paste
 
@@ -61,10 +61,11 @@ All commands refer to normal mode.
 
 - join current line with next line: `J`
 - get a preview in helm (e.g. files, themes...): `TAB` on current selection
-- show more action on helm selection: `C-z`
+- show more actions on helm selection: `C-z`
 - even more stuff on helm selection: `C-c`
 - surround selection with ": `s "`
 - quit something that may hang: `C-g`
+- repeat previous action: `.`
 
 
 ## Spacemacs/Files/Buffers
@@ -75,7 +76,7 @@ All commands refer to normal mode.
 - helm locate: `SPC f L`
 - go up one level: `SPC-h`
 - leave/quit spacemacs, also kill daemon: `SPC q q`
-- kill `frame` (Emacs window), leave daemon running: `SPC q z`
+- kill 'frame' (Emacs window), leave daemon running: `SPC q f`
 - use helm to find a file, insert path at position: `C-c i` (in helm)
 - resume last helm: `SPC r l`
 - copy file path/directory: `SPC f y y` / `SPC f y d`
@@ -86,6 +87,7 @@ All commands refer to normal mode.
 - kill active buffer `SPC b d`
 - kill all buffers but current one: `SPC b K`
 - open recent files with helm: `SPC f r`
+- kill buffer and window: `SPC b x`
 
 ## Windows
 
@@ -109,8 +111,9 @@ All commands refer to normal mode.
 - [ag](https://geoff.greer.fm/ag/) is available: `SPC s a`
     - use ag with pattern to given on current file: `SPC s a a`
     - use ag in helm to search all buffers: `SPC s a b`
+    - use ag to search in directory: `SPC s a d`
 - search using helm swoop: `SPC s s`
-- smart search (search directory): `SPC /` or `SPC s p`
+- smart search (search project): `SPC /` or `SPC s p`
 - search all buffers using helm swoop: `SPC s C-s`
 - jump to function definition, heading (i.e. as parsed by semantic) etc: `SPC s j`
 - edit all occurrences of a search term: `SPC s e`
@@ -128,22 +131,19 @@ All commands refer to normal mode.
 
 ## Dired
 
-- activate dired: `C-x d`
 - jump to containing directory in dired: `SPC f j`
-
-### Commands & navigation in dired
-
-- open directory at point in same buffer: `a`
-- go one directory up: `^`
-- jump to next/previous subdirectory in current listing: `>` / `<`
-- rename: `R`
-- copy: `C`
-- delete: `D`
-- create directory: `+`
-- mark/unmark file: `m` / `u`
-- unmark all: `U`
-- mark by pattern: `% m`, e.g. `% m \.png` marks all png files
-- initiate diff with file under cursor: `=`
+- activate dired: `C-x d`
+    - open directory at point in same buffer: `a`
+    - go one directory up: `^`
+    - jump to next/previous subdirectory in current listing: `>` / `<`
+    - rename: `R`
+    - copy: `C`
+    - delete: `D`
+    - create directory: `+`
+    - mark/unmark file: `m` / `u`
+    - unmark all: `U`
+    - mark by pattern: `% m`, e.g. `% m \.png` marks all png files
+    - initiate diff with file under cursor: `=`
 
 ## Projectile
 
@@ -160,7 +160,7 @@ All commands refer to normal mode.
 - indent region: `C-M-\`
 - highlight symbol at current position: `SPC s h`
 - toggle comment for line (using evil-commentary): `g c c`
-- toggle comment for paragraph: `g c }`
+- toggle comment for paragraph: `g c a p`
 - insert unicode character using helm ucs: `SPC i u`
 - toggle aggressive indent: `SPC t I`
   - indent/unindent: `>` / `<`
@@ -173,11 +173,23 @@ All commands refer to normal mode.
 - compile: `SPC c C`
 - close compilation window: `SPC c d`
 
-## Debugging
+## Debugging w/ realgud
+
+- start with `realgud:*` command (e.g. `realgud:ipdb`)
+    - Next / step over: `n` / `F10`
+    - Step (into): `s` / `F11`
+    - Finish / step out: `f` / `S-F11`
+    - set breakpoint: `b` / `F9`
+    - clear breakpoint: `D`
+    - continue: `c` / `F5`
+    - quit: `q` / `S-F5`
+    - run / restart: `R` / `r`
+    - goto command window: `S`
+
 
 ## Terminal
 
-- open terminal in new buffer: `SPC ''`
+- open terminal in new buffer: `SPC '`
 
 ## Spell checking
 
@@ -258,19 +270,5 @@ Start ediff by calling `ediff` or `ediff-buffers` (`SPC SPC ediff`)
     - quit: `q`
     - get help: `q`
 
-## realgud
-
-- start with `realgud-*` command
-    - Next / step over: `n` / `F10`
-    - Step (into): `s` / `F11`
-    - Finish / step out: `f` / `S-F11`
-    - set breakpoint: `b` / `F9`
-    - clear breakpoint: `D`
-    - continue: `c` / `F5`
-    - quit: `q` / `S-F5`
-    - run / restart: `R` / `r`
-    - goto command window: `S`
-
 **TODO: working with terminal**
-
-**TODO: debugger integration**
+**TODO: macros**
