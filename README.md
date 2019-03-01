@@ -177,7 +177,7 @@ All commands refer to normal mode.
 
 ## Compilation
 
-- compile through helm-make: `SPC c`
+- compile through helm-make: `SPC c m`
 - compile: `SPC c C`
 - close compilation window: `SPC c d`
 
