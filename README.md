@@ -67,6 +67,14 @@ All commands refer to normal mode.
 - quit something that may hang: `C-g`
 - repeat previous action: `.`
 
+### Macros
+
+- start recording a macro in register a: `q a`
+- finish recording: `q`
+- apply macro in register a: `@ a`
+- apply macro in register a 7 times: `7 @ a`
+- apply macro in register a to visual selection: select and `:normal @a`
+
 
 ## Spacemacs/Files/Buffers
 
@@ -271,4 +279,3 @@ Start ediff by calling `ediff` or `ediff-buffers` (`SPC SPC ediff`)
     - get help: `q`
 
 **TODO: working with terminal**
-**TODO: macros**
