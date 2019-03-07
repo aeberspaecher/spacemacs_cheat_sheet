@@ -117,10 +117,11 @@ All commands refer to normal mode.
   hits
 - turn off highlighting for previous search: `:nohl`, or `SPC s c`
 - [ag](https://geoff.greer.fm/ag/) is available: `SPC s a`
-    - use ag with pattern to given on current file: `SPC s a a`
+    - use ag with pattern to search in current file: `SPC s a a`
     - use ag in helm to search all buffers: `SPC s a b`
     - use ag to search in directory: `SPC s a d`
 - search using helm swoop: `SPC s s`
+- edit all hits from search: `C-c C-e` in helm window
 - smart search (search project): `SPC /` or `SPC s p`
 - search all buffers using helm swoop: `SPC s C-s`
 - jump to function definition, heading (i.e. as parsed by semantic) etc: `SPC s j`
