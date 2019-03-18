@@ -7,6 +7,7 @@ All commands refer to normal mode.
 ### Change to insert mode
 
 - insert before position: `i`
+- insert at beginning of line (before first non-whitespace character): `I`
 - append after position: `a`
 - append after line: `A`
 - append new line after current line: `o`
