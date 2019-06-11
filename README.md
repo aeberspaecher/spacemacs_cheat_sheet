@@ -65,6 +65,8 @@ All commands refer to normal mode.
 - show more actions on helm selection: `C-z`
 - even more stuff on helm selection: `C-c`
 - surround selection with ": `s "`
+- surround word under cursor ("at point") by ": `ysiw"`
+- delete surrsounding ": `ds"`
 - quit something that may hang: `C-g`
 - repeat previous action: `.`
 
@@ -76,6 +78,11 @@ All commands refer to normal mode.
 - apply macro in register a 7 times: `7 @ a`
 - apply macro in register a to visual selection: select and `:normal @a`
 
+### Marks
+
+- set mark labelled a: `m a`
+- jump to beginning of line containing mark a: `' a`
+- jump to mark a: `` ` a``
 
 ## Spacemacs/Files/Buffers
 
