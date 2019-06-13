@@ -30,11 +30,11 @@ All commands refer to normal mode.
 - move a word (~ alphanumeric stuff between whitespace) left / right: `b`, `w`
 - move a WORD (any stuff between whitespace) left / right: `B`, `W`
 - move to beginning of file / end of file: `g g` / `G`
-- move to first non-whitespace character in line: `^`
+- move to beginning/end of line: `0`, `$`
+- move to first/last non-whitespace character in line: `^` / `g_`
 - move to previous/next block/function: `[[` / `]]`
 - move to previous/next paragraph: `{` / `}`
 - move backwards/forwards by one sentence: `(` / `)`
-- move to beginning / end of line: `0`, `$`
 - move to matching parenthesis/TeX environment...: `%`
 - go to line 42: `l:77 RET`
 - aided line selection: `SPC j l` (works nicely with `d` or `g c` as well)
